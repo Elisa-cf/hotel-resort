@@ -73,41 +73,93 @@ body {
   text-shadow: 1px 1px grey;
 }
 
-/* services */
+/* imagen principal, h2, boton habitaciones */
 
-/* .services {
-  /* padding-top: 30px;
-  padding-bottom: 30px;
-  height: 360px;
-  background-color: #dcdcdc; */
-/* } */
-
-/* .services_title {
-  /* display: flex;
+.intro {
+  display: flex;
   justify-content: center;
-  font-size: 18px; */
-/* }
-
-.line_services { */
-/* border: 1px solid #e1c16e;
-  width: 3%;
-  margin-top: -10px; */
-/* } */
-
-/* .services_items { */
-/* display: flex;
-  list-style: none;
-  justify-content: space-around;
-  margin-top: 40px; */
-/* } */
-
-/* .services_item {
-  /* display: flex;
-  align-items: center;
   text-align: center;
-  padding-right: 50px;
-  flex-direction: column; */
-/* }   
+  background-image: url("images/home-image.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 350px;
+}
+
+.cta-home {
+  box-shadow: 0px 0px 15px -5px;
+  border: 0.5px solid #a9a9a9;
+  background: rgba(120, 120, 120, 0.5);
+  margin: 80px 50px;
+}
+
+.intro_title {
+  color: white;
+  text-shadow: 2px 2px grey;
+}
+
+.line_intro_title {
+  border: 1px solid #e1c16e;
+  width: 25%;
+  margin-top: -5px;
+}
+
+.intro_spirit {
+  color: white;
+  text-shadow: 2px 2px grey;
+}
+
+.intro_button {
+  background-color: #e1c16e;
+  padding: 5px 10px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  /* border-radius: 10px; */
+}
+
+.intro_button:hover {
+  background-color: rgba(232, 232, 232, 0.1);
+  color: white;
+  border: solid 2px #e1c16e;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* services */
+/* 
+.services {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 360px; 
+} */
+
+.services_title {
+  text-align: center;
+}
+
+.line_services {
+  border: 1px solid #e1c16e;
+  width: 10%;
+}
+
+.services_items {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #dcdcdc;
+}
+
+.services_item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px 50px 20px 10px;
+}
 
 /* features rooms cards  */
 
@@ -120,7 +172,7 @@ body {
 
 .line_features_rooms {
   border: 1px solid #e1c16e;
-  width: 3%;
+  width: 30%;
   margin-top: -10px;
 }
 
@@ -183,7 +235,7 @@ body {
 
 .card-button {
   border: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   height: 50px;
   background-color: lightblue;
   width: 50%;
