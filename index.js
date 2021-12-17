@@ -103,3 +103,14 @@ rooms.forEach(function (favRoom) {
 // rooms.forEach((room) => {
 //   if (room.favorite === "true") createCard(room.name, room.picture);
 // });
+
+// HAMBURGUER MENU
+
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
