@@ -29,3 +29,114 @@ body {
     width: 1024px;
   }
 }
+
+/* features rooms cards  */
+
+.features_rooms_title {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.line_features_rooms {
+  border: 1px solid #e1c16e;
+  width: 3%;
+  margin-top: -10px;
+}
+
+.cards {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 5px;
+  width: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
+}
+.card:hover button {
+  opacity: 1;
+  background-color: #56bfc2;
+  font-size: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+  color: white;
+}
+
+.card:hover .card-img {
+  opacity: 0.5;
+  /* transform: scale(1.1); */
+  box-shadow: 0px 0px 15px 0px;
+  cursor: pointer;
+}
+
+.card-img {
+  /* border-radius: 10px 10px 0 0; */
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://pixabay.com/es/photos/hotel-resort-vino-botella-rojo-4689409/");
+  overflow: hidden;
+  height: 200px;
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px 20px;
+}
+.card-body h2 {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.card-button {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  background-color: lightblue;
+  width: 50%;
+  transition: 0.6s linear;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card-button:hover {
+  opacity: 1;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #dcdcdc;
+  font-size: 15px;
+}
