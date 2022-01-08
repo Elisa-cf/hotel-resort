@@ -57,6 +57,7 @@ const allRooms = [
  },
 ];
 
+
 function createCard(title, imageUrl) {
  const card = document.createElement("div");
  card.classList.add("card");
@@ -84,7 +85,9 @@ function createCard(title, imageUrl) {
  cardButton.classList.add("card-button");
  cardButton.innerHTML = "See more";
  cardBody.appendChild(cardButton);
+
 }
+;
 
 //to iterate all the rooms:
 
@@ -103,3 +106,4 @@ function myFunction() {
   x.style.display = "block";
  }
 }
+
