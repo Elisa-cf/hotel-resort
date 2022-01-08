@@ -28,7 +28,7 @@ body {
   }
 }
 
-/* navbar */
+/* navbar: logo + hamburguer menu */
 
 .navbar {
   overflow: hidden;
@@ -57,11 +57,10 @@ body {
   top: 0;
   padding-top: 20px;
 }
-
-.topnav a:hover {
+ .navbar a:hover {
   background-color: #ddd;
-  color: black;
-}
+  color: #56bfc2;
+} 
 
 .active {
   background-color: white;
@@ -161,7 +160,7 @@ body {
   padding: 50px 50px 20px 10px;
 }
 
-/* features rooms cards  */
+/* rooms title, line and cards style */
 
 .features_rooms_title {
   padding-top: 30px;

@@ -51,7 +51,7 @@ const rooms = [
     type: "family",
     guests: 6,
     petsFriendly: false,
-    favorite: "true",
+    favorite: "false",
     picture:
       "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg",
   },
