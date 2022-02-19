@@ -13,7 +13,7 @@
        
         <nav class="navbar">
                
-       <a href="index.html" class="active"><span class="hotel-resort">Hotel Resort</span></a>
+       <a href="index.html"><span class="hotel-resort">Hotel Resort</span></a>
           
             <div id="myLinks">
                 <a href="index.html" >Home</a></li>
@@ -30,49 +30,123 @@
     <!-- image, lema and button homepage  -->
 
     <section class="intro">
-        <div class="cta-home">
+      <div class="cta-home">
         <h2 class="intro_title">Our Rooms</h2>
         <hr class="line_intro_title">
         <h3 class="intro_spirit">Delight yourself: Up to 40% discount!</h3>
-        <button class="intro_button"><a href="index.html" >Return Home</a></button>
-        </div>
-        </section>
+        <button class="intro_button"><a href="index.html">Return Home</a></button>
+      </div>
+    </section>
 
     
 
             <!-- features rooms -->
-
-    <section>
-        <div class="features_rooms_title">
-            <h2>Select your Room</h2>
-            </div>
-            <hr class="line_features_rooms">
-        </div>
-
-<!-- filters  --> 
- <section>
-     <div class="filters">
-      <input type="text" class="search-input" id="search-input" placeholder="🔎 Type to search" />
-      <select class="select" name="home">
-        <option value="double">Double</option>
-        <option value="Triple">Triple</option>
-        <option value="Family">Family</option>
-      </select>
-      <div>
-        <label for="available"> Available </label>
-        <input type="checkbox" class="available-checkbox" name="checkbox" id="">
-        <label for="available">Pets friendly</label>
-        <input type="checkbox" class="available-checkbox" name="checkbox" id="">
-        <label for="available">Breakfast included </label>
-        <input type="checkbox" class="available-checkbox" name="checkbox" id="">
+<section>
+  <div class="features_rooms_title">
+    <h2>Select your Room</h2>
+  </div>
+  <hr class="line_features_rooms">
+  </div>
 </section>
 
+<!-- filters  --> 
 
-        <div class="cards">
-       
-        </div>
-    </div>
+<!-- <select class="select" name="home">
+  <option value="All">All rooms</option>
+  <option value="double">Double</option>
+  <option value="triple">Triple</option>
+  <option value="family">Family</option>
+</select>
+<div> -->
+
+    <!-- Search input -->
+    
+    <section class="cards-filter">
+      <input type="text" class="search-input" id="search-input" name="search-input"
+        placeholder="🔎 Search for a room's name" onkeyup="searchRoom()" />
     </section>
+
+    <!-- Control buttons -->
+    <section id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('available')"> Available</button>
+      <button class="btn" onclick="filterSelection('pets-friendly')"> Pets friendly</button>
+      <button class="btn" onclick="filterSelection('breakfast')"> Breakfast included</button>
+      <button class="btn" onclick="filterSelection('best-rated')">Best rated</button>
+    </section>
+</div>
+  <!-- Cards list -->
+ <div class="card-lists" id="card-lists">
+   <div class="row">
+
+   <div class=" filterDiv available breakfast">
+     <div class="card">
+       <img src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_960_720.jpg" alt="minnie room" class="card-image">
+       <div class="card-body">
+          <button class="card-button">see more</button>
+         <h2 class="card-title">Minnie</h2>
+        </div>
+       </div>
+     </div>
+
+    <div class=" filterDiv available pets-friendly breakfast best-rated">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2020/10/08/08/10/hotel-5637315_960_720.jpg" alt="bella room"
+          class="card-image">
+        <div class="card-body">
+          <button class="card-button">see more</button>
+          <h2 class="card-title">Bella</h2>
+        </div>
+        </div>
+      </div>
+
+       <div class=" filterDiv pets-friendly breakfast best-rated">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg" alt="ariel room"
+          class="card-image">
+        <div class="card-body">
+          <button class="card-button">see more</button>
+          <h2 class="card-title">Ariel</h2>
+        </div>
+        </div>
+      </div>
+
+      <div class=" filterDiv pets-friendly">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2020/01/15/18/02/room-4768553_960_720.jpg" alt="alicia room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Alicia</h2>
+          </div>
+        </div>
+      </div>
+
+    <div class=" filterDiv pets-friendly breakfast">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg" alt="jasmine room"
+          class="card-image">
+        <div class="card-body">
+          <button class="card-button">see more</button>
+          <h2 class="card-title">Jasmine</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class=" filterDiv available pets-friendly  best-rated">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg" alt="aurora room"
+          class="card-image">
+        <div class="card-body">
+          <button class="card-button">see more</button>
+          <h2 class="card-title">Aurora</h2>
+        </div>
+      </div>
+    </div>
+
+   </div>
+ </div>
+
 
     <!-- footer section -->
 
@@ -80,7 +154,8 @@
                 <p>Hotel Resort © 2021, All Rights Reserved</p>
             </footer>
                
-            <script src="rooms.js">
-            </script>
+           
+             <script src="app.js"></script>
+          
 </body>
 </html>
