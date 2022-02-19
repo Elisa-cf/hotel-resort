@@ -6,7 +6,7 @@ const rooms = [
     type: "double",
     guests: 2,
     petsFriendly: false,
-    favorite: "false",
+    favorite: "true",
     picture:
       "https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_960_720.jpg",
   },
@@ -24,7 +24,7 @@ const rooms = [
     type: "triple",
     guests: 3,
     petsFriendly: true,
-    favorite: "true",
+    favorite: "false",
     picture:
       "https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg",
   },
@@ -33,7 +33,7 @@ const rooms = [
     type: "triple",
     guests: 3,
     petsFriendly: true,
-    favorite: "true",
+    favorite: "false",
     picture:
       "https://cdn.pixabay.com/photo/2020/01/15/18/02/room-4768553_960_720.jpg",
   },
@@ -51,7 +51,7 @@ const rooms = [
     type: "family",
     guests: 6,
     petsFriendly: false,
-    favorite: "false",
+    favorite: "true",
     picture:
       "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg",
   },
