@@ -86,31 +86,22 @@ function createCard(title, imageUrl) {
   cardBody.appendChild(cardButton);
 }
 
-//to iterate all the rooms:
-
-// for (let i = 0; i < rooms.length; i++) {
-//   createCard(rooms[i].name, rooms[i].picture);
-// }
-
 //select the 3 favorites:
 
 rooms.forEach(function (favRoom) {
   if (favRoom.favorite === "true") createCard(favRoom.name, favRoom.picture);
 });
 
-//other way:
+//HAMBURGER MENU WITH JQUERY:
 
-// rooms.forEach((room) => {
-//   if (room.favorite === "true") createCard(room.name, room.picture);
-// });
+$(document).ready(function () {
+  $('#icon').click(function () {
+    $('ul').toggleClass('show')
+  })
+})
 
-// HAMBURGUER MENU
+//FUNCTION TO STOP THE SCROLL WHILE HAMBURGUER MENU DISPLAYS ITEMS:
 
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+function lockScroll() {
+  document.body.classList.toggle('lock-scroll');
 }

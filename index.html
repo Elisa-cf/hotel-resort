@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,24 @@
 
     <script src="https://kit.fontawesome.com/1eac6e976b.js" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
+
 <body>
 
     <!-- header/menu section -->
 
     <header>
-       
         <nav class="navbar">
-               
-       <a href="index.html"><span class="hotel-resort">Hotel Resort</span></a>
-          
-            <div id="myLinks">
-                <a href="index.html" >Home</a></li>
-                <a href="rooms.html" >Rooms</a></li>
-               <a href="#about" >About</a></li>
-                <a href="#contact" >Contact</a></li>
-                </div>
-                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+            <a class="unstyled" href="index.html"><span class="hotel-resort">Hotel Resort</span></a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li> <a href="rooms.html" class="a-links">Rooms</a></li>
+                <li> <a href="#about" class="a-links">About</a></li>
+                <li> <a href="#contact" class="a-links">Contact</a>
+                </li>
+            </ul>
+            <label id="icon"><i class="fa fa-bars" onclick="lockScroll();"></i></label>
         </nav>
     </header>
 
@@ -36,60 +35,57 @@
 
     <section class="intro">
         <div class="cta-home">
-        <h2 class="intro_title">Hotel Resort</h2>
-        <hr class="line_intro_title">
-        <h3 class="intro_spirit">Save Up To 40%!</h3>
-        <a href="rooms.html" class="intro_button" >See our rooms</a>
+            <h2 class="intro_title">Hotel Resort</h2>
+            <hr class="line_intro_title">
+            <h3 class="intro_spirit">Save Up To 40%!</h3>
+            <a href="rooms.html" class="intro_button">See our rooms</a>
         </div>
-        </section>
-    
+    </section>
+
 
     <!-- services section  -->
 
     <section class="services" id="home">
+
         <div class="services_title">
-        <h2 >Services</h2>
+            <h2>Services</h2>
         </div>
         <hr class="line_services">
         <ul class="services_items">
 
-            <div class="parent"> 
-            <li class="div1">
-                <i class='fas fa-hotel' style='font-size:36px; color:#e1c16e'></i>
-                <h3>Great Location</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
+            <div class="parent">
+
+                <li class="div1">
+                    <i class='fas fa-hotel' style='font-size:36px; color:#e1c16e'></i>
+                    <h3>Great Location</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
                 </li>
-            
-             
-           
-            <li class="div2">
-                <i class='fas fa-utensils' style='font-size:36px; color:#e1c16e'></i>
-         
-                <h3>
-                    Buffet & Bar</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
-            </li>
-           
-            
-           
-            <li class="div3">
-                <i class='fas fa-spa' style='font-size:36px; color:#e1c16e'></i>
-                <h3>Spa & Massage</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
+
+                <li class="div2">
+                    <i class='fas fa-utensils' style='font-size:36px; color:#e1c16e'></i>
+
+                    <h3>
+                        Buffet & Bar</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
                 </li>
-            
-           
-            <li  class="div4">
-                <i class='fas fa-dumbbell' style='font-size:36px; color:#e1c16e'></i>
-                <h3>Fitness Room</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
+
+                <li class="div3">
+                    <i class='fas fa-spa' style='font-size:36px; color:#e1c16e'></i>
+                    <h3>Spa & Massage</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
+                </li>
+
+                <li class="div4">
+                    <i class='fas fa-dumbbell' style='font-size:36px; color:#e1c16e'></i>
+                    <h3>Fitness Room</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Adipisci ea voluptatibus sit excepturi ipsam non iste assumenda iusto fugiat?</p>
                 </li>
             </div>
-            </ul>
+        </ul>
 
     </section>
 
@@ -97,30 +93,31 @@
     <!-- features rooms -->
 
     <section>
+
         <div class="features_rooms_title">
             <h2>Our Features Rooms</h2>
-            </div>
             <hr class="line_features_rooms">
+            <div class="cards">
+            </div>
         </div>
-        <div class="cards">
-       
-        </div>
-    </div>
     </section>
 
     <!-- footer section -->
 
-            <footer class="footer">
-                    <p>© 2022 Hotel Resort</p>
-                <ul class="social-list">
-                <li class="social-list__item"><a href="https://www.linkedin.com/in/elisa-canyelles/" target="blank"><i class="fab fa-brands fa-linkedin-in" style='font-size:25px; color:#e1c16e'></i></a></li>
-                <li class="social-list__item"><a href="https://github.com/Elisa-cf" target="blank"><i class="fab fa-brands fa-github" style='font-size:25px; color:#e1c16e'></i></a></li>
-                </ul>
+    <footer class="footer">
 
-            </footer>
-            
-            <script src="index.js">
-            </script>
-            
+        <ul class="social-list">
+            <li class="social-list__item"><a href="https://www.linkedin.com/in/elisa-canyelles/" target="blank"><i
+                        class="fab fa-brands fa-linkedin-in" style='font-size:25px; color:#56bfc2;'></i></a></li>
+            <li class="social-list__item"><a href="https://github.com/Elisa-cf" target="blank"><i
+                        class="fab fa-brands fa-github" style='font-size:25px; color:#56bfc2;; '></i></a></li>
+        </ul>
+
+    </footer>
+
+    <script src="index.js">
+    </script>
+
 </body>
+
 </html>

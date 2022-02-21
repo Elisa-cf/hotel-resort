@@ -1,115 +1,106 @@
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Hotel Resort</title>
- <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/1eac6e976b.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Resort</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1eac6e976b.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 </head>
+
 <body>
- <header>
-       
-        <nav class="navbar">
-               
-       <a href="index.html"><span class="hotel-resort">Hotel Resort</span></a>
-          
-            <div id="myLinks">
-                <a href="index.html" >Home</a></li>
-                <a href="rooms.html" >Rooms</a></li>
-               <a href="#about" >About</a></li>
-                <a href="#contact" >Contact</a></li>
-                </div>
-                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-        </nav>
-    </header>
 
-    <!-- image, lema and button homepage  -->
+  <!-- header/menu section -->
 
-    <section class="intro">
-      <div class="cta-home">
-        <h2 class="intro_title">Our Rooms</h2>
-        <hr class="line_intro_title">
-        <h3 class="intro_spirit">Up to 40% discount!</h3>
-     <a href="index.html"  class="intro_button">Return Home</a>
-      </div>
-    </section>
+  <header>
+    <nav class="navbar">
+      <a class="unstyled" href="index.html"><span class="hotel-resort">Hotel Resort</span></a>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li> <a href="rooms.html" class="a-links">Rooms</a></li>
+        <li> <a href="#about" class="a-links">About</a></li>
+        <li> <a href="#contact" class="a-links">Contact</a>
+        </li>
+      </ul>
+      <label id="icon"><i class="fa fa-bars" onclick="lockScroll();"></i></label>
+    </nav>
+  </header>
 
-    
+  <!-- image, lema and button homepage  -->
+
+  <section class="intro">
+    <div class="cta-home">
+      <h2 class="intro_title">Our Rooms</h2>
+      <hr class="line_intro_title">
+      <h3 class="intro_spirit">Up to 40% discount!</h3>
+      <a href="index.html" class="intro_button">Return Home</a>
+    </div>
+  </section>
 
 
+  <!-- filters  -->
 
-<!-- filters  --> 
+  <section>
+    <div class="features_rooms_title">
+      <h2>Select your Room</h2>
+    </div>
+    <hr class="line_features_rooms">
+    </div>
+  </section>
+  <!-- Search input -->
 
-<!-- <select class="select" name="home">
-  <option value="All">All rooms</option>
-  <option value="double">Double</option>
-  <option value="triple">Triple</option>
-  <option value="family">Family</option>
-</select>
-<div> -->
+  <section class="cards-filter">
+    <!-- features rooms -->
+    <input type="text" class="search-input" id="search-input" name="search-input" placeholder="Search for a room's name"
+      onkeyup="searchRoom()" />
+  </section>
 
-
-    <section>
-      <div class="features_rooms_title">
-        <h2>Select your Room</h2>
-      </div>
-      <hr class="line_features_rooms">
-      </div>
-    </section>
-    <!-- Search input -->
-    
-    <section class="cards-filter">
-                  <!-- features rooms -->
-      <input type="text" class="search-input" id="search-input" name="search-input"
-        placeholder="Search for a room's name" onkeyup="searchRoom()" />
-    </section>
-
-    <!-- Control buttons -->
-    <section id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-      <button class="btn" onclick="filterSelection('available')"> Available</button>
-      <button class="btn" onclick="filterSelection('pets-friendly')"> Pets friendly</button>
-      <button class="btn" onclick="filterSelection('breakfast')"> Breakfast included</button>
-      <button class="btn" onclick="filterSelection('best-rated')">Best rated</button>
-    </section>
-</div>
+  <!-- Control buttons -->
+  <section id="myBtnContainer">
+    <button class="btn actived" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('available')"> Available</button>
+    <button class="btn" onclick="filterSelection('pets-friendly')"> Pets friendly</button>
+    <button class="btn" onclick="filterSelection('breakfast')"> Breakfast included</button>
+    <button class="btn" onclick="filterSelection('best-rated')">Best rated</button>
+  </section>
+  </div>
   <!-- Cards list -->
- <div class="card-lists" id="card-lists">
-   <div class="row">
+  <div class="card-lists" id="card-lists">
+    <div class="row">
 
-   <div class=" filterDiv available breakfast">
-     <div class="card">
-       <img src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_960_720.jpg" alt="minnie room" class="card-image">
-       <div class="card-body">
-          <button class="card-button">see more</button>
-         <h2 class="card-title">Minnie</h2>
-        </div>
-       </div>
-     </div>
-
-    <div class=" filterDiv available pets-friendly breakfast best-rated">
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2020/10/08/08/10/hotel-5637315_960_720.jpg" alt="bella room"
-          class="card-image">
-        <div class="card-body">
-          <button class="card-button">see more</button>
-          <h2 class="card-title">Bella</h2>
-        </div>
+      <div class=" filterDiv available breakfast">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_960_720.jpg" alt="minnie room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Minnie</h2>
+          </div>
         </div>
       </div>
 
-       <div class=" filterDiv pets-friendly breakfast best-rated">
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg" alt="ariel room"
-          class="card-image">
-        <div class="card-body">
-          <button class="card-button">see more</button>
-          <h2 class="card-title">Ariel</h2>
+      <div class=" filterDiv available pets-friendly breakfast best-rated">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2020/10/08/08/10/hotel-5637315_960_720.jpg" alt="bella room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Bella</h2>
+          </div>
         </div>
+      </div>
+
+      <div class=" filterDiv pets-friendly breakfast best-rated">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg" alt="ariel room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Ariel</h2>
+          </div>
         </div>
       </div>
 
@@ -124,40 +115,47 @@
         </div>
       </div>
 
-    <div class=" filterDiv pets-friendly breakfast">
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg" alt="jasmine room"
-          class="card-image">
-        <div class="card-body">
-          <button class="card-button">see more</button>
-          <h2 class="card-title">Jasmine</h2>
+      <div class=" filterDiv pets-friendly breakfast">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg" alt="jasmine room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Jasmine</h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class=" filterDiv available pets-friendly  best-rated">
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg" alt="aurora room"
-          class="card-image">
-        <div class="card-body">
-          <button class="card-button">see more</button>
-          <h2 class="card-title">Aurora</h2>
+      <div class=" filterDiv available pets-friendly  best-rated">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg" alt="aurora room"
+            class="card-image">
+          <div class="card-body">
+            <button class="card-button">see more</button>
+            <h2 class="card-title">Aurora</h2>
+          </div>
         </div>
       </div>
+
     </div>
-
-   </div>
- </div>
+  </div>
 
 
-    <!-- footer section -->
+  <!-- footer section -->
+  <footer class="footer">
 
-            <footer class="footer">
-                <p>Hotel Resort © 2022, All Rights Reserved</p>
-            </footer>
-               
-           
-             <script src="app.js"></script>
-          
+    <ul class="social-list">
+      <li class="social-list__item"><a href="https://www.linkedin.com/in/elisa-canyelles/" target="blank"><i
+            class="fab fa-brands fa-linkedin-in" style='font-size:25px; color:#56bfc2;'></i></a></li>
+      <li class="social-list__item"><a href="https://github.com/Elisa-cf" target="blank"><i
+            class="fab fa-brands fa-github" style='font-size:25px; color:#56bfc2;; '></i></a></li>
+    </ul>
+
+  </footer>
+
+
+  <script src="rooms.js"></script>
+
 </body>
+
 </html>
