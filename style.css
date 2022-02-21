@@ -207,7 +207,6 @@ background-color: white;
   padding-top: 20px;
 }
  .navbar a:hover {
-  background-color: #ddd;
   color: #56bfc2;
 } 
 
@@ -406,10 +405,23 @@ background-color: white;
 
 .footer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: baseline;
   background-color: #dcdcdc;
-  font-size: 15px;
+ 
 }
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+ 
+.social-list__item {
+  margin: 0 0.5em;
+} 
 
 
 /* filters */
