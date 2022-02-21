@@ -2,11 +2,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
  margin: 0 auto; 
-  font-family: "Gill Sans", sans-serif;
+font-family: "Gill Sans", sans-serif;
 }
 
 
@@ -93,7 +95,7 @@ text-align: center;
 .cta-home{
   width: 50%;
   height: 50%;
-   padding-top: 20px;
+  padding-top: 20px;
 }
 
 .intro_title {
@@ -164,12 +166,16 @@ text-align: center;
   margin-bottom: 50px;
 }
  
+@media screen and (min-width: 1024px) {
 .intro_button {
   padding: 20px 45px;
   font-size: 18px;
 }
 
+}
+
 /* imagen principal, h2, boton habitaciones */
+
 
 } 
 
@@ -178,43 +184,136 @@ text-align: center;
 
 
 /* navbar: logo + hamburguer menu */
+ 
 
 .navbar {
-  overflow: hidden;
-background-color: white;
-  position: relative;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
 }
 
-.navbar #myLinks {
-  display: none;
-}
-
-.navbar a {
-  color: #e1c16e;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.navbar a.icon {
-  background: white;
+.hotel-resort {
   font-size: 25px;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-top: 20px;
+  text-decoration: none;
+  border-style: solid;
+  text-shadow: 1px 1px grey;
+  padding: 10px 50px;
+  line-height: 120px; 
+  color: #56bfc2; 
+
 }
- .navbar a:hover {
-  color: #56bfc2;
+
+.hotel-resort:hover {
+   color: #e1c16e;
+}
+
+nav ul {
+  float:right;
+  margin-right: 20px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 30px; 
+}
+
+nav a {
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius:  3px;
+}
+
+
+a.active {
+  background-color: #56bfc2;
+  color:white;
+}
+
+a.active:hover {
+  color:#e1c16e;
+}
+
+ a.a-links:hover {
+  color:#e1c16e;
 } 
 
 
+li:active, li:hover {
+  border: 0.5px solid #56bfc2;
+  transition: .5s;
+}
+
+nav #icon {
+  color: #e1c16e;
+  font-size: 35px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1048px) {
 .hotel-resort {
-  color: #56bfc2;
-  font-size: 30px;
-   text-shadow: 1px 1px grey; 
+   font-size: 20px;
+   padding-left: 60px; 
+} 
+
+nav ul {
+  margin-right: 20px;
+}
+nav a{
+  font-size: 17px;
+}
+}
+
+@media (max-width: 909px) {
+  .lock-scroll {
+    overflow: hidden;
+}
+
+  nav #icon{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 103px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+     background: #56bfc2; 
+  }
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav a{
+    font-size: 20px;
+  }
+   li:active, li:hover{
+    border: none;
+  } 
+  nav ul.show{
+  left:0;
+  }
+
+@media (max-width: 768px) {
+.hotel-resort {
+    font-size: 18px;
+    padding: 8px 30px;
+}
+}
 }
 
 /* imagen principal, h2, boton habitaciones */
@@ -262,7 +361,6 @@ background-color: white;
   font-size: 18px;
   font-weight: 400;
   color: white;
-   text-shadow: 1px 1px black;
   text-decoration: none;
   font-weight: bold;
 }
@@ -367,14 +465,10 @@ background-color: white;
 .card-body {
   padding: 10px 20px;
 }
-/* .card-body h2 {
-  margin: 5px 0px;
-  text-align: center;
-} */
+
 
 .card-button {
   border: none;
-  /* border-radius: 10px; */
   height: 50px;
   background-color: lightblue;
   width: 50%;
@@ -438,6 +532,7 @@ background-color: white;
 }
 
 /* Style the buttons */
+
 .btn {
   border: none;
   outline: none;
@@ -449,10 +544,10 @@ background-color: white;
 
 
 /* Add a dark background to the active button */
-.active, .btn:hover {
+ .btn.actived, .btn:hover {
   background-color: #56bfc2;
   color: white;
-}
+}  
 
 #myBtnContainer {
   display: flex;
@@ -477,3 +572,5 @@ justify-content:center;
 padding: 12px 16px;
 font-size: 15px;
 }
+
+
