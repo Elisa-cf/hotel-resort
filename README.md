@@ -1,3 +1,5 @@
 # Hotel Resort
 
-Hotel resort website in progress using Vanilla JS, CSS and HTML
+Hotel resort "Paraíso" website created using Vanilla JS, JQuery, CSS and HTML.
+
+Live site: https://hotel-resort-paraiso.netlify.app/
